@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const cron = require('node-cron');
+const serverless = require('serverless-http');
 require('dotenv').config();
 
 const app = express();
@@ -220,3 +221,4 @@ app.listen(PORT, () => {
 });
 
 module.exports = app;
+module.exports.handler = serverless(app);
