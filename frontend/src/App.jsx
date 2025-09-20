@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const API_URL = import.meta.env.REACT_APP_API_URL || 'http://localhost:5000/api';
+const API_URL = import.meta.env.REACT_APP_API_URL|| "https://v98b-zhqg.vercel.app/api";
 
 function App() {
   const [question, setQuestion] = useState('');
