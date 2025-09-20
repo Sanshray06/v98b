@@ -106,9 +106,14 @@ function App() {
         <div className="bg-yellow-400 px-6 md:p-12 mb-12 flex justify-center items-center border-white">
           <div className="w-full max-w-2xl mx-auto space-y-6">
             {/* Send Question Online Button */}
-            <button className="w-full bg-gray-300 text-gray-700  py-10 px-6 rounded-md text-sm font-bold hover:bg-gray-400 transition-all duration-300 uppercase">
-              Send my question online
+            <button 
+            onClick={handleSubmit}
+              disabled={loading}
+            className="w-full bg-gray-300 text-gray-700  py-10 px-6 rounded-md text-sm font-bold hover:bg-gray-400 transition-all duration-300 uppercase cursor-pointer disabled:cursor-not-allowed">
+              {loading ? 'SENDING...' : 'Send my question online'}
             </button>
+
+
 
             {/* First Set of Fields */}
             <div className="space-y-6">
@@ -206,13 +211,13 @@ function App() {
             </div>
 
             {/* Submit Button */}
-            <button 
+            {/* <button 
               onClick={handleSubmit}
               disabled={loading}
               className="w-full bg-green-500 text-white py-4 px-8 rounded-full text-base font-bold cursor-pointer transition-all duration-300 hover:bg-green-600 disabled:opacity-70 disabled:cursor-not-allowed uppercase"
             >
               {loading ? 'SUBMITTING...' : 'SUBMIT QUESTION'}
-            </button>
+            </button> */}
           </div>
         </div>
 
